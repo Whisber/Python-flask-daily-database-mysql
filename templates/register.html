@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %} 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<form action="/register" method="post">
+        <label style="font-size:large;">Firstname</label>
+        <input style="font-size:large;" type="text" id="firstname" name="firstname"><br>
+        <label style="font-size:large;">Lastname</label>
+        <input style="font-size:large;" type="text" id="lastname" name="lastname"><br>
+        <label style="font-size:large;">Age</label>
+        <input style="font-size:large;" type="text" id="age" name="age"><br>
+        <label style="font-size:large;">About</label>
+        <input style="font-size:large;" type="text" id="about" name="about"><br>
+        <button style="font-size:large;" type="submit">Create</button><br>
+</form>       
+
+<div class="container">
+        <table class="table table-striped-columns">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>firstname</td>
+                    <td>lastname</td>
+                    <td>age</td>
+                    <td>about</td>
+                    <td>created_at</td>
+                    <td>updated_at</td>
+                    
+                </tr>
+                {% for register in registers %}
+                <tr>
+                    <td>{{register.id}}</td>
+                    <td>{{register.firstname}}</td>
+                    <td>{{register.lastname}}</td>
+                    <td>{{register.age}}</td>
+                    <td>{{register.about}}</td>
+                    <td>{{register.created_at}}</td>
+                    <td>{{register.updated_at}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+
+{% endblock %}

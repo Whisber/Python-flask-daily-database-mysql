@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Table{% endblock %}
+
+{% block body %} 
+<form action="/newcreatetable" method="post">
+        <label style="font-size:large;">Table Name</label>
+        <input style="font-size:large;" type="text" id="tablename" name="tablename"><br>
+        <button style="font-size:large;" type="submit">Create Table</button><br>
+</form>       
+{% endblock %}

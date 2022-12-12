@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}Create{% endblock %}
+
+{% block body %} 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<form action="/create" method="post">
+        <label style="font-size:large;">ip</label>
+        <input style="font-size:large;" type="text" id="ip" name="ip"><br>
+        <label style="font-size:large;">user</label>
+        <input style="font-size:large;" type="text" id="user" name="user"><br>
+        <label style="font-size:large;">parent</label>
+        <input style="font-size:large;" type="text" id="parent" name="parent"><br>
+        <label style="font-size:large;">data1</label>
+        <input style="font-size:large;" type="text" id="data1" name="data1"><br>
+        <label style="font-size:large;">data2</label>
+        <input style="font-size:large;" type="text" id="data2" name="data2"><br>
+        <label style="font-size:large;">data3</label>
+        <input style="font-size:large;" type="text" id="data3" name="data3"><br>
+        <label style="font-size:large;">data4</label>
+        <input style="font-size:large;" type="text" id="data4" name="data4"><br>
+        <label style="font-size:large;">data5</label>
+        <input style="font-size:large;" type="text" id="data5" name="data5"><br>
+        <label style="font-size:large;">data6</label>
+        <input style="font-size:large;" type="text" id="data6" name="data6"><br>
+        <label style="font-size:large;">data7</label>
+        <input style="font-size:large;" type="text" id="data7" name="data7"><br>
+        <label style="font-size:large;">data8</label>
+        <input style="font-size:large;" type="text" id="data8" name="data8"><br>
+        <label style="font-size:large;">data9</label>
+        <input style="font-size:large;" type="text" id="data9" name="data9"><br>
+        <label style="font-size:large;">data10</label>
+        <input style="font-size:large;" type="text" id="data10" name="data10"><br>
+        <button style="font-size:large;" type="submit">Create</button><br>
+</form>       
+
+<div class="container">
+        <table class="table table-striped-columns">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>ip</td>
+                    <td>user</td>
+                    <td>parent</td>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                    <td>data4</td>
+                    <td>data5</td>
+                    <td>data6</td>
+                    <td>data7</td>
+                    <td>data8</td>
+                    <td>data9</td>
+                    <td>data10</td>
+                    <td>created_at</td>
+                    
+                </tr>
+                {% for data in datas %}
+                <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.ip}}</td>
+                    <td>{{data.user}}</td>
+                    <td>{{data.parent}}</td>
+                    <td>{{data.data1}}</td>
+                    <td>{{data.data2}}</td>
+                    <td>{{data.data3}}</td>
+                    <td>{{data.data4}}</td>
+                    <td>{{data.data5}}</td>
+                    <td>{{data.data6}}</td>
+                    <td>{{data.data7}}</td>
+                    <td>{{data.data8}}</td>
+                    <td>{{data.data9}}</td>
+                    <td>{{data.data10}}</td>
+                    <td>{{data.created_at}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+
+{% endblock %}

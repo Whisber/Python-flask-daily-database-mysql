@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Update {% endblock %}
+
+{% block body %}
+
+<form action="/update" method="post">
+    <label style="font-size:large;">Enter id the column to be changed</label>
+    <input style="font-size:large;" type="text" id="Id" name="Id"><br>
+    <label style="font-size:large;">Change about</label>
+    <input style="font-size:large;" type="text" id="About" name="About"><br>
+    <button style="font-size:large;" type="submit">Select</button><br>
+</form>  
+
+{% endblock %}
